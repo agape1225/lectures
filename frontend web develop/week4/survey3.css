@@ -1,0 +1,28 @@
+body {
+    background-color: aliceblue;
+    font-style: italic;
+}
+
+section {
+    background-color: pink;
+    margin: 20px;
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+span{
+    color: blue;
+    font-weight : bold;
+}
+
+hr {
+    border : 1px solid black; 
+}
+
+footer {
+    background-color: orange;
+    
+}

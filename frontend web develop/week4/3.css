@@ -1,0 +1,38 @@
+body {
+    background-color: aliceblue;
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+hr {
+    border : 1px solid black; 
+}
+
+
+ul {
+    border-style: dotted;
+    border-width: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1em;
+    text-indent: 1em;
+    font-style: oblique;
+}
+
+h2 {
+    color: blue;
+    text-shadow:  3px 3px 5px skyBlue;
+}
+
+footer {
+    background-color: orange;
+    border-radius : 10px;
+}
