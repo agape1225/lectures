@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fixed Bar</title>
+    <style>
+        .container {
+            /* margin-top: 50px;
+            margin-left: 100px; */
+            position: fixed;
+            top: 150px;
+            left: 310px;
+            width: 100%;
+        }
+
+        .top_bar {
+            /* background: lightblue; */
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 150px;
+        }
+
+        .left_bar {
+            /* background: gray; */
+            position: fixed;
+            left: 0;
+            top: 150px;
+            bottom: 0;
+            width: 150px;
+        }
+
+        #top_menu {
+            display: inline-block;
+            height: 50px;
+            /* //width: 200px; */
+            border: solid 1px black;
+            margin: 20px;
+            /* margin-bottom: 0px; */
+
+        }
+
+        #banner_img {
+            width: 200px;
+        }
+
+        .top_bar_content {
+            padding-top: 15px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: bold;
+            display: inline-block;
+            width: 300px;
+        }
+
+        .top_bar_content:hover {
+            color: aqua;
+            cursor: pointer;
+        }
+
+        #top_bottom_menu {
+            display: block;
+            border: 1px solid red;
+            padding: 0%;
+        }
+
+        .top_bottom_content {
+            text-align: center;
+            font-size: 18px;
+            padding-top: 5px;
+            font-weight: bold;
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            border: 1px solid black;
+            /* background-color: orange; */
+        }
+
+        .left_bar_list_header {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .list_content {
+            font-size: 14px;
+        }
+
+        .container_select_box {
+            height: 30px;
+            border: 1px solid black;
+            padding: 10px;
+            padding-top: 5px;
+            padding-bottom: 0%;
+            width: 100%;
+            background-color: rgba(211, 211, 211, 0.766);
+        }
+
+        .combo_boxes {}
+
+        .radios {
+            font-size: 14px;
+        }
+
+        button {
+            background-color: lightgray;
+            width: 50px;
+            color: #FFFFFF;
+            border: 0px;
+        }
+
+        /* table{
+            padding: 30px;
+        } */
+        table {
+            border-spacing: 10px;
+        }
+
+        tbody {
+            padding: 30px;
+        }
+
+        tr {
+
+            padding: 30px;
+        }
+
+        td {
+            width: 250px;
+            height: 120px;
+            /* margin: 30px; */
+            border: 1px solid blue;
+            border-top: 3px solid blue;
+
+        }
+
+        .logos {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin: 10px;
+            margin-bottom: 10px;
+        }
+
+        .td_section {
+            display: inline-block;
+        }
+
+        .td_head {
+            font-size: 14px;
+            width: 150px;
+            padding: 0px;
+            margin: 5px;
+            font-weight: bolder;
+
+        }
+
+        .td_description {
+            font-size: 13px;
+            width: 150px;
+            padding: 0px;
+            margin: 5px;
+        }
+
+        .td_date {
+            font-size: 11px;
+            width: 150px;
+            padding: 0px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top_bar">
+        <a href="./hibrain_net.html"><img src="https://asset.hibrain.io/images/dist/logo/head_logo.png" alt=""
+                id="banner_img"></a>
+
+        <div id="top_menu">
+            <span class="top_bar_content">채용정보</span>
+            <span class="top_bar_content">대학원생 모집</span>
+            <span class="top_bar_content">학술연구정보</span>
+            <span class="top_bar_content">브레인카페</span>
+        </div>
+        <div id="top_bottom_menu">
+            <span class="top_bottom_content">채용정보</span>
+            <span class="top_bottom_content">채용정보 검색</span>
+        </div>
+    </div>
+    <div class="left_bar">
+        <span class="left_bar_list_header">맞춤정보</span>
+        <hr>
+        <ul>
+            <li class="list_content">맞춤채용</li>
+            <li class="list_content">관심기관</li>
+        </ul>
+        <hr>
+        <br>
+        <span class="left_bar_list_header">맞춤정보</span>
+        <hr>
+        <ul>
+            <li class="list_content">전공별</li>
+            <li class="list_content">지역별</li>
+            <li class="list_content">기관별</li>
+        </ul>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="container_select_box">
+            <select name="position" class="combo_boxes">
+                <option value="1" selected>기관유형</option>
+                <option value="2">대학</option>
+                <option value="3">정부/공공/지자체</option>
+                <option value="4">기업/기업연구소</option>
+            </select>
+            <select name="job" class="combo_boxes">
+                <option value="1" selected>채용유형</option>
+                <option value="2">교수</option>
+                <option value="3">강사</option>
+                <option value="4">연구원</option>
+            </select>
+            <span class="radios">학력</span>
+            <input type="radio" class="radios">박사
+            <input type="radio" class="radios">석사
+            <input type="radio" class="radios">학사
+            <input type="text">
+            <button>검색</button>
+        </div>
+        <span style="font-size:16px; font-weight: bold;">추천 채용정보</span>
+
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://web.kangnam.ac.kr/common/plugin/syworks.design.library/template/portal/images/sub/introd/logo_01.png"
+                            alt="" class="logos">
+                        <div class="td_section">
+                            <p class="td_head">강남대학교</p>
+                            <p class="td_description">2022학년도 전임교원 초빙</p>
+                            <p class="td_date">2021.10.20 ~ 2021.11.01</p>
+                        </div>
+
+                    </td>
+                    <td>
+                        <img src="data:image/png;base64,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"
+                            alt="" class="logos">
+                        <div class="td_section">
+                            <p class="td_head">단국대학교</p>
+                            <p class="td_description">교수초빙</p>
+                            <p class="td_date">2021.10.19 ~ 2021.10.30</p>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Logo_of_Kyonggi_University.svg/1200px-Logo_of_Kyonggi_University.svg.png"
+                            alt="" class="logos">
+                        <div class="td_section">
+                            <p class="td_head">경기대학교</p>
+                            <p class="td_description">2021학년도 하반기 연구원 초빙</p>
+                            <p class="td_date">2021.10.21 ~ 2021.10.30</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="data:image/png;base64,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"
+                            alt="" class="logos">
+                        <div class="td_section">
+                            <p class="td_head">명지대학교</p>
+                            <p class="td_description">전임교원</p>
+                            <p class="td_date">2021.10.18 ~ 2021.10.25</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>

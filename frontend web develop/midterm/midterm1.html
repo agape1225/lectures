@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html {
+            background-color: bisque;
+        }
+
+        thead {
+            background-color: aqua;
+            color: blue;
+            font-weight: bolder;
+        }
+
+        .firstCol {
+            width: 100px;
+            font-weight: bolder;
+        }
+
+        .cols {
+            width: 150px;
+        }
+
+        table {
+            border-color: gray;
+            text-align: center;
+            border: 2px solid gray;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 2px solid gray;
+        }
+
+        th:hover,
+        td:hover {
+            background-color: gray;
+            cursor: pointer;
+        }
+    </style>
+    <title>기본 테이블 만들기</title>
+</head>
+
+<body>
+    <h3>기본 구조를 가진 표</h3>
+    <hr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2" class="firstCol">학년</th>
+                <th colspan="2">학기</th>
+            </tr>
+            <tr>
+                <th class="cols">1</th>
+                <th class="cols">2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="firstCol">3</td>
+                <td>sw</td>
+                <td>vr</td>
+            </tr>
+            <tr>
+                <td class="firstCol">4</td>
+                <td colspan="2">ai</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
