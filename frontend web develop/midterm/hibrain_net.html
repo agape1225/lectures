@@ -8,8 +8,8 @@
             /* margin-top: 50px;
             margin-left: 100px; */
             position: fixed;
-            top: 150px;
-            left: 310px;
+            top: 130px;
+            left: 160px;
             width: 100%;
         }
 
@@ -35,7 +35,7 @@
             display: inline-block;
             height: 50px;
             /* //width: 200px; */
-            border: solid 1px black;
+            /* border: solid 1px black; */
             margin: 20px;
             /* margin-bottom: 0px; */
 
@@ -51,7 +51,7 @@
             font-size: 17px;
             font-weight: bold;
             display: inline-block;
-            width: 300px;
+            width: 180px;
         }
 
         .top_bar_content:hover {
@@ -61,7 +61,7 @@
 
         #top_bottom_menu {
             display: block;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             padding: 0%;
         }
 
@@ -73,22 +73,38 @@
             display: inline-block;
             width: 150px;
             height: 30px;
-            border: 1px solid black;
+            /* border: 1px solid black; */
             /* background-color: orange; */
         }
 
         .left_bar_list_header {
             font-size: 16px;
             font-weight: bold;
+            margin-left: 10px;
+        }
+
+        hr{
+            margin-left: 10px;
         }
 
         .list_content {
             font-size: 14px;
         }
 
+        .list_content:hover{
+            background-color: lightgray;
+
+        }
+
+        li a  :hover{
+            background-color: lightgray;
+
+        }
+
         .container_select_box {
             height: 30px;
-            border: 1px solid black;
+            /* border: 1px solid black; */
+            border-top: 2px solid gray;
             padding: 10px;
             padding-top: 5px;
             padding-bottom: 0%;
@@ -168,6 +184,10 @@
             padding: 0px;
             margin: 5px;
         }
+
+        #job_info{
+            background-color: orange;
+        }
     </style>
 </head>
 
@@ -183,7 +203,7 @@
             <span class="top_bar_content">브레인카페</span>
         </div>
         <div id="top_bottom_menu">
-            <span class="top_bottom_content">채용정보</span>
+            <span class="top_bottom_content" id="job_info">채용정보</span>
             <span class="top_bottom_content">채용정보 검색</span>
         </div>
     </div>
@@ -191,17 +211,17 @@
         <span class="left_bar_list_header">맞춤정보</span>
         <hr>
         <ul>
-            <li class="list_content">맞춤채용</li>
-            <li class="list_content">관심기관</li>
+            <li class="list_content"> <a>맞춤채용</a></li>
+            <li class="list_content"> <a>관심기관</a></li>
         </ul>
         <hr>
         <br>
-        <span class="left_bar_list_header">맞춤정보</span>
+        <span class="left_bar_list_header">분류별채용정보</span>
         <hr>
         <ul>
-            <li class="list_content">전공별</li>
-            <li class="list_content">지역별</li>
-            <li class="list_content">기관별</li>
+            <li class="list_content"> <a>전공별</a></li>
+            <li class="list_content"> <a>지역별</a></li>
+            <li class="list_content"> <a>기관별</a></li>
         </ul>
         <hr>
     </div>
@@ -228,7 +248,7 @@
         </div>
         <span style="font-size:16px; font-weight: bold;">추천 채용정보</span>
 
-        <table border="1">
+        <table>
             <tbody>
                 <tr>
                     <td>
