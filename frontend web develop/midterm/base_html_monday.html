@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fixed Bar</title>
+    <style>
+        .container {
+            /* margin-top: 50px;
+            margin-left: 100px; */
+            position: fixed;
+            top: 160px;
+            left: 160px;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        .top_bar {
+            /* background: lightblue; */
+            border: 1px solid black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 150px;
+        }
+
+        .left_bar {
+            /* background: gray; */
+            position: fixed;
+            left: 0;
+            top: 160px;
+            bottom: 0;
+            width: 150px;
+            border: 1px solid black;
+        }
+
+        #top_menu {
+            display: inline-block;
+            height: 50px;
+            /* width: 500px; */
+            margin: 20px;
+            margin-left: 100px;
+            /* float: left; */
+            border: 1px solid black;
+
+        }
+
+        #top_bar_ul{
+            padding: 0px;
+        }
+
+        #banner_img {
+            margin: 20px;
+            height: 50px;
+            width: 200px;
+
+            float: left;
+            border: 1px solid black;
+        }
+
+        .top_bar_content {
+            /* padding-top: 15px; */
+            text-align: center;
+            font-size: 17px;
+            font-weight: bold;
+            display: inline-block;
+            width: 180px;
+
+            border: 1px solid black;
+        }
+
+        .top_bar_content:hover {
+            color: aqua;
+            cursor: pointer;
+        }
+
+        #top_bottom_menu {
+            display: block;
+            background-color: #E0E0E0;
+            /* border: 1px solid red; */
+            padding: 0%;
+            border: 1px solid black;
+
+        }
+
+        .top_bottom_content {
+            text-align: center;
+            font-size: 18px;
+            padding-top: 5px;
+            font-weight: bold;
+            display: inline-block;
+            /* width: 150px; */
+            height: 30px;
+
+            border: 1px solid black;
+            /* border: 1px solid black; */
+            /* background-color: orange; */
+        }
+
+        .left_bar_list_header {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 10px;
+
+            border: 1px solid black;
+        }
+
+        hr {
+            margin-left: 10px;
+        }
+
+        .list_content {
+            font-size: 14px;
+            height: 80px;
+            border: 1px solid #4169E1;
+        }
+
+        .list_content:hover {
+            background-color: #4169E1;
+            cursor: pointer;
+
+        }
+
+        li a :hover {
+            background-color: lightgray;
+
+
+        }
+
+        .container_select_box {
+            height: 30px;
+            /* border: 1px solid black; */
+            border-top: 2px solid gray;
+            padding: 10px;
+            padding-top: 5px;
+            padding-bottom: 0%;
+            width: 100%;
+            background-color: rgba(211, 211, 211, 0.766);
+        }
+
+        .radios {
+            font-size: 14px;
+        }
+
+        button {
+            background-color: lightgray;
+            width: 50px;
+            color: #FFFFFF;
+            border: 0px;
+        }
+
+        .logos {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin: 10px;
+            margin-bottom: 10px;
+        }
+
+        .td_section {
+            display: inline-block;
+        }
+
+
+        .td_description {
+            font-size: 13px;
+            width: 150px;
+            padding: 0px;
+            margin: 5px;
+        }
+
+        .td_date {
+            font-size: 11px;
+            width: 150px;
+            padding: 0px;
+            margin: 5px;
+        }
+
+        #job_info {
+            background-color: orange;
+        }
+
+        .lest_bar_parents {
+            padding: 10px;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+
+        #recomended_job {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        div.card_section {
+            overflow: hidden;
+        }
+
+        div.card_item {
+            width: 250px;
+            height: 120px;
+            margin: 10px;
+            border: 1px solid blue;
+            border-top: 3px solid blue;
+            float: left;
+            /* padding: 10px; */
+            text-align: center;
+        }
+
+        #main_logo{
+            height: 40px;
+        }
+
+        #button_login{
+            width: 100px;
+        }
+
+        .td_head{
+            font-size: 14px;
+            width: 150px;
+            padding: 0px;
+            margin: 5px;
+            font-weight: bolder;
+            background-color: #F0F8FF;
+        }
+        footer{
+            position: fixed;
+            top: 550px;
+        }
+        .info_table{
+            margin: 10px;
+            width: 700px;
+            border-top: 2px solid #4169E1;
+            border-bottom: 2px solid #4169E1;
+        }
+        .info_table_tr{
+            height: 40px;
+        }
+
+        .combo_boxes{
+            /* size: 14px; */
+            height: 30px;
+            width: 200px;
+        }
+
+        .info_table_buttons{    
+            margin: 10px;
+            width: 100px;
+        }
+
+        #list_content_head{
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top_bar">
+        <!-- <a href="./hibrain_net.html" id="banner_img">
+            <img src="https://asset.hibrain.io/images/dist/logo/head_logo.png" alt="" >
+        </a> -->
+
+        <div id="banner_img">
+            <a href="https://www.giro.or.kr/">
+                <img src="./KakaoTalk_20230417_191850387.gif" alt="" id="main_logo">
+            </a>
+        </div>
+
+        <div id="top_menu">
+            <ul id="top_bar_ul">
+                <li class="top_bar_content">지방세/세외수입</li>
+                <li class="top_bar_content">국고금</li>
+                <li class="top_bar_content">전기/전화요금</li>
+            </ul>
+        </div>
+        <div id="top_bottom_menu">
+            <span class="top_bottom_content" id="job_info">비회원납부로 접속 중</span>
+            <span class="top_bottom_content">자동로그아웃: </span>
+            <span class="top_bottom_content">남은시간</span>
+            <span class="top_bottom_content">5분 20초</span>
+            <input type="text">
+            <button id="button_login">회원로그인</button>
+        </div>
+    </header>
+
+    <nav class="left_bar">
+        <ul class="lest_bar_parents">
+            <li class="list_content" id="list_content_head"> <a>지방세/세외수입</a></li>
+            <li class="list_content"> <a>지방세</a></li>
+            <li class="list_content"> <a>세외수입</a></li>
+            <li class="list_content"> <a>환경개선부담금</a></li>
+        </ul>
+    </nav>
+    <section class="container">
+
+        <h1>세외수입</h1>
+        <ul>
+            <li>전국 또는 세외수입이 부과된 해당 기관을 선택한 후 남부하시기 바랍니다. <span>(광역시, 도 선택 후 해당 기관 선택)</span></li>
+            <li><span>세외수입은 해당 기관 요청에 따라 납부취소가 허용되지 않습니다.</span></li>
+        </ul>
+
+        <table class="info_table">
+            <tr class="info_table_tr">
+                <td class="td_head">행정구역선택</td>
+                <td class="info_table_td_content">
+                    <select name="job" class="combo_boxes">
+                    <option value="1" selected>Lorem Ipsum</option>
+                    <option value="2">Lorem Ipsum</option>
+                    <option value="3">Lorem Ipsum</option>
+                    <option value="4">Lorem Ipsum</option>
+                </select>
+                <select name="job" class="combo_boxes">
+                    <option value="1" selected>Lorem Ipsum</option>
+                    <option value="2">Lorem Ipsum</option>
+                    <option value="3">Lorem Ipsum</option>
+                    <option value="4">Lorem Ipsum</option>
+                </select>
+            </td>
+            </tr>
+        </table>
+
+        <table class="info_table">
+            <tr class="info_table_tr">
+                <td class="td_head">
+                    <input type="radio" name="user_info">주민등록번호
+                </td>
+                <td><input type="text"><button class="info_table_buttons">본인인증조회</button></td>
+            </tr>
+            <tr class="info_table_tr">
+                <td class="td_head"><input type="radio" name="user_info">전자납부번호</td>
+                <td><input type="text"><button class="info_table_buttons">조회</button></td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        회사소개 | 오시는길 | 개인정보처리방침
+    </footer>
+</body>
+
+</html>
