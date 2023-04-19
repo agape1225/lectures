@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fixed Bar</title>
+    <style>
+        .container {
+            /* margin-top: 50px;
+            margin-left: 100px; */
+            position: fixed;
+            top: 200px;
+            /* left: 160px; */
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .top_bar {
+            /* background: lightblue; */
+            /* border: 1px solid black; */
+            padding: 0px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 80px;
+        }
+
+        .left_bar {
+            /* background: gray; */
+            position: fixed;
+            left: 0;
+            top: 160px;
+            bottom: 0;
+            width: 150px;
+            border: 1px solid black;
+        }
+
+        #top_menu {
+            display: inline-block;
+            height: 50px;
+            /* width: 500px; */
+            /* width: 100%; */
+            
+            margin: 20px;
+            margin-left: 0px;
+            /* float: left; */
+            /* border-bottom: 1px solid black; */
+
+        }
+
+        #top_bar_ul{
+            padding: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+
+        #top_bar_ul_small{
+            padding: 0px;
+        }
+
+        #banner_img {
+            margin: 20px;
+            /* height: 50px;
+            width: 200px; */
+            height: 30px;
+
+            float: left;
+        }
+
+        .top_bar_content {
+            /* padding-top: 15px; */
+            text-align: center;
+            font-size: 18px;
+            color: #4C4C4C;
+            font-weight: bold;
+            display: inline-block;
+            width: 100px;
+            padding: 20px;
+            padding-top: 0px;
+            padding-left: 0px;
+
+            /* border: 1px solid black; */
+        }
+
+        .top_bar_content:hover {
+            color: #00CD3C;
+            cursor: pointer;
+        }
+
+        #top_bottom_menu {
+            display: block;
+            /* border: 1px solid red; */
+            padding: 0%;
+            border: 1px solid black;
+        }
+
+        .top_bottom_content {
+            text-align: center;
+            font-size: 18px;
+            padding-top: 5px;
+            font-weight: bold;
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+
+            border: 1px solid black;
+            /* border: 1px solid black; */
+            /* background-color: orange; */
+        }
+
+        .left_bar_list_header {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 10px;
+
+            border: 1px solid black;
+        }
+
+        hr {
+            margin-left: 10px;
+        }
+
+        .list_content {
+            font-size: 14px;
+        }
+
+        .list_content:hover {
+            background-color: lightgray;
+            cursor: pointer;
+
+        }
+
+        li a :hover {
+            background-color: lightgray;
+
+
+        }
+
+        .container_select_box {
+            height: 30px;
+            /*border: 1px solid black;
+            border-top: 2px solid gray; */
+            padding: 10px;
+            padding-top: 5px;
+            padding-bottom: 0%;
+            margin: 10px;
+            /* width: 100%;
+            background-color: rgba(211, 211, 211, 0.766); */
+        }
+
+        .container_select_box_small {
+            height: 30px;
+            /*border: 1px solid black;
+            border-top: 2px solid gray; */
+            padding: 10px;
+            padding-top: 5px;
+            padding-bottom: 0%;
+            margin: 10px;
+            margin-top: 20px;
+            /* width: 100%;
+            background-color: rgba(211, 211, 211, 0.766); */
+        }
+        .radios {
+            font-size: 14px;
+        }
+
+        button {
+            background-color: lightgray;
+            width: 50px;
+            color: #FFFFFF;
+            border: 0px;
+        }
+
+        .logos {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin: 10px;
+            margin-bottom: 10px;
+        }
+
+        .td_section {
+            display: inline-block;
+        }
+
+        .td_head {
+            font-size: 14px;
+            width: 150px;
+            padding: 0px;
+            margin: 5px;
+            font-weight: bolder;
+
+        }
+
+        .td_description {
+            font-size: 13px;
+            width: 150px;
+            padding: 0px;
+            margin: 5px;
+        }
+
+        .td_date {
+            font-size: 11px;
+            width: 150px;
+            padding: 0px;
+            margin: 5px;
+        }
+
+        #job_info {
+            background-color: orange;
+        }
+
+        .lest_bar_parents {
+            padding: 10px;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+
+        #recomended_job {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        div.card_section {
+            overflow: hidden;
+        }
+
+        div.card_item {
+            width: 280px;
+            height: 370px;
+            margin: 5px;
+            margin-bottom: 20px;
+            float: left;
+            border: 1px solid lightgray;
+            /* padding: 10px; */
+            /* text-align: center; */
+        }
+
+        footer{
+            position: fixed;
+            top: 710px;
+            left: 0px;
+            width: 100%;
+        }
+
+        .navs{
+            position: fixed;
+            top: 100px;
+        }
+
+        .song_img{
+            width: 100%;
+
+        }
+
+        .search_bar{
+            /* padding-top: 20px; */
+            width: 670px;
+            height: 30px;
+            border: 1px solid #00CD3C;
+            border-radius : 50px;
+            font-size: 17px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .search_button{
+
+            background-color: #00CD3C;
+            height: 30px;
+
+            text-align: center;
+            font-size: 17px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+
+        .search_bar_content{
+            font-size: 13px;
+            color:darkgray;
+            padding: 10px;
+        }
+
+        #navs_top_menu{
+            border-bottom: 3px solid darkgray;
+            width: 1500px;
+
+        }
+
+        #my_music{
+            margin-left: 100px;
+        }
+
+        #navs_top_menu_small{
+            border-bottom: 1px solid darkgray;
+            width: 1500px;
+
+        }
+
+        .top_bar_content_small {
+            /* padding-top: 15px; */
+            text-align: center;
+            color: #8C8C8C;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            width: 100px;
+
+            /* border: 1px solid black; */
+        }
+
+        .top_bar_content_small:hover {
+            color: #00CD3C;
+            cursor: pointer;
+        }
+
+
+        #today_menu{
+            margin-left: 50px;
+        }
+
+        form{
+            display: inline-block;
+        }
+
+
+        .combo_boxes{
+            font-size: 16px;
+            color: #6C6C6C;
+            border: 0px solid black;
+            border-bottom: 1px solid #6C6C6C;
+        }
+
+        .card_section_first_content{
+            text-align: left;
+            text-size: 16px;
+            margin: 5px;
+        }
+
+        #melon_logo{
+
+            height: 30px;
+        }
+
+        #selected_top_bar_content{
+            border-bottom: 2px solid #00CD3C;
+        }
+
+        #inner_today{
+            font-size: 30px;
+        }
+        #left_comboboxes{
+            margin-left: 380px;
+        }
+        #what_song{
+            font-size: 20px;
+        }
+
+        #left_radio{
+            margin-left: 550px;
+        }
+
+        .card_section_second_content{
+            
+            font-size: 15px;
+            margin: 5px;
+        }
+
+        .card_section_last_content{
+            font-size: 13px;
+            margin: 5px;
+        }
+
+        .heart_logo{
+            width: 10px;
+        }
+        .footer_content{
+            font-size: 14px;
+            font-weight: bolder;
+            color: #8C8C8C;
+            margin: 15px;
+        }
+        #left_footer{
+            margin-left: 555px;
+        }
+        .DJ_NAME{
+            color: darkorange;
+            font-weight: bolder;
+        }
+        .second_search{
+            background-color: #D3D4CD;
+            border: 0px solid black;
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top_bar">
+        <!-- <a href="./hibrain_net.html" id="banner_img">
+            <img src="https://asset.hibrain.io/images/dist/logo/head_logo.png" alt="" >
+        </a> -->
+
+        <div id="banner_img">
+            <a href="https://www.melon.com/"><img src="./image/logo_melon.png" alt="" id="melon_logo"></a>
+            
+
+        </div>
+
+        <div id="top_menu">
+            <div class="search_bar">
+                <span class="search_bar_content">음악검색</span>
+                
+            </div>
+            <button class="search_button">검색</button>
+        </div>
+        
+    </header>
+    <nav class="navs">
+        <div id="navs_top_menu">
+            <ul id="top_bar_ul">
+                <li class="top_bar_content">멜론챠트</li>
+                <li class="top_bar_content">최신음악</li>
+                <li class="top_bar_content">장르음악</li>
+                <li class="top_bar_content" id="selected_top_bar_content">멜론DJ</li>
+                <li class="top_bar_content">멜론TV</li>
+                <li class="top_bar_content" id="my_music">마이뮤직</li>
+            </ul>
+        </div>
+
+        <div id="navs_top_menu_small">
+            <ul id="top_bar_ul_small">
+                <li class="top_bar_content_small" id="today_menu">투데이</li>
+                <li class="top_bar_content_small">전문가선곡</li>
+                <li class="top_bar_content_small">파워DJ</li>
+                <li class="top_bar_content_small">인기</li>
+            </ul>
+        </div>
+        <!-- <div id="top_bottom_menu">
+            <span class="top_bottom_content" id="job_info">Lorem Ipsum</span>
+            <span class="top_bottom_content">Lorem Ipsum</span>
+        </div>
+        <div id="top_bottom_menu">
+            <div id="top_menu">
+                <ul id="top_bar_ul">
+                    <li class="top_bar_content">Lorem Ipsum</li>
+                    <li class="top_bar_content">Lorem Ipsum</li>
+                    <li class="top_bar_content">Lorem Ipsum</li>
+                    <li class="top_bar_content">Lorem Ipsum</li>
+                </ul>
+            </div>
+            <span class="top_bottom_content" id="job_info">Lorem Ipsum</span>
+            <span class="top_bottom_content">Lorem Ipsum</span>
+        </div> -->
+
+    </nav>
+    <section class="container">
+        
+        <div class="container_select_box">
+
+            <span id="inner_today">투데이</span>
+            <form action="">
+                <select name="position" class="combo_boxes" id="left_comboboxes">
+                    <option value="1" selected>태그</option>
+                    <option value="2">플레이리스트</option>
+                    <option value="3">닉네임</option>
+                </select>
+                <input type="text" value="# 태그 입력" class="combo_boxes">
+                <input type="submit" value="검색" name="" id="" class="second_search">
+            </form>
+        
+            
+        </div>
+
+        <div class="container_select_box_small">
+
+            <span id="what_song">4월 19일 오늘은 뭘 듣지?</span>
+            <input type="radio" class="radios" name="my_dream_is_phd" id="left_radio">
+            <input type="radio" class="radios" name="my_dream_is_phd">
+            <input type="radio" class="radios" name="my_dream_is_phd">
+        
+            
+        </div>
+
+        <div id="card_section">
+            <div class="card_item">
+                <img src="./image/imgUrl-1.jpg" alt="" class="song_img">
+                <div class="card_section_first_content">
+                    4월의 봄, 커피향 진하게 나는 pop
+                </div>
+                <div class="card_section_second_content">
+                    <span class="DJ_NAME">DJ</span> 손익분기점
+                    
+                </div>
+                <div class="card_section_last_content">
+                    <img src="./image/red_heart.png" alt="" class="heart_logo">
+                    <span>145 | 36곡</span>
+                </div>
+                
+            </div>
+            <div class="card_item">
+                <img src="./image/imgUrl-2.jpg" alt="" class="song_img">
+                <div class="card_section_first_content">
+                    4월의 봄, 커피향 진하게 나는 pop
+                </div>
+                <div class="card_section_second_content">
+                    <span class="DJ_NAME">DJ</span> 손익분기점
+                </div>
+                <div class="card_section_last_content">
+                    <img src="./image/red_heart.png" alt="" class="heart_logo">
+                    <span>145 | 36곡</span>
+                </div>
+            </div>
+            <div class="card_item">
+                <img src="./image/imgUrl-3.jpg" alt="" class="song_img">
+                <div class="card_section_first_content">
+                    4월의 봄, 커피향 진하게 나는 pop
+                </div>
+                <div class="card_section_second_content">
+                    <span class="DJ_NAME">DJ</span> 손익분기점
+                </div>
+                <div class="card_section_last_content">
+                    <img src="./image/red_heart.png" alt="" class="heart_logo">
+                    <span>145 | 36곡</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <span class="footer_content" id="left_footer">멜론6.0 둘러보기</span>
+        <span class="footer_content">멜론스튜디오</span>
+        <span class="footer_content">고객센터</span>
+          
+    </footer>
+</body>
+
+</html>
