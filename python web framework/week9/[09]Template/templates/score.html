@@ -1,0 +1,27 @@
+<table border="1">
+    
+    <thead style="background-color: lightcoral;">
+        <td>결과</td>
+        <td>이름</td>
+        <td>국어점수</td>
+        <td>영어점수</td>
+    </thead>
+    
+    {% for item in data %}
+    
+    <tr>
+        <td>
+            {{item[3]}}
+        </td>
+        <td style="color:aquamarine">
+            {{item[0]}}
+        </td>
+        <td>
+            {{item[1]}}
+        </td>
+        <td>
+            {{item[2]}}
+        </td>
+    </tr>
+    {% endfor %}
+</table>

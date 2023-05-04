@@ -1,0 +1,15 @@
+{% if username == "": %}
+  <h1>Hello User!</h1>
+{% else %}
+  <h1>Hello {{ username }}!</h1>
+{% endif %}
+
+<h1>Score {{score}} : 
+{% if score >= 90 %}
+     A+ 
+{% elif score >= 80 %}
+     B+ 
+{% else  %}
+     C+   
+{% endif %}
+</h1>
