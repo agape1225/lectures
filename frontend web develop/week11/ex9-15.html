@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>new Image()로 이미지 로딩</title>
+    <script>
+        // 배열에 저장된 이름의 이미지들을 미리 로딩
+        var files = ["media/penguins.png", "media/lighthouse.png",
+            "media/Chrysanthemum.png", "media/Desert.png",
+            "media/Hydrangeas.png", "media/Jellyfish.png",
+            "media/Koala.png", "media/Tulips.png"];
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) { // 8
+            imgs[i] = new Image(); // 이미지 객체 생성
+            imgs[i].src = files[i]; // 이미지 로딩
+        }
+        // 다음 이미지 출력
+        var next = 0; // 이미지 index
+        function change(img) {
+            next++; // 다음 이미지, 1, 2, …, 7, 8
+            next %= imgs.length; // 개수를 넘으면 처음으로, 8->0
+            img.src = imgs[next].src; // 이미지 변경
+        }
+    </script>
+</head>
+
+<body>
+    <h3>new Image()로 이미지 로딩</h3>
+    <hr>
+    <p>이미지를 클릭하면 다음 이미지를 보여줍니다.</p>
+    <img style="border:20px ridge wheat" src="media/penguins.png" alt="." width="267" height="200"
+        onclick="change(this)">
+</body>
+
+</html>
