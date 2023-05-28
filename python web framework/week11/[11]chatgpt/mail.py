@@ -1,8 +1,7 @@
 #set abc=hello
 import os
 import openai
-api_key = os.environ["api_key"]
-openai.api_key = api_key 
+
 
 
 subject = "오늘 오전에 다툰 사건"

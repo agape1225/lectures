@@ -1,15 +1,15 @@
 import os
 import openai
 
-api_key = os.environ["api_key"]
-openai.api_key = api_key 
 
 txt = "여우가 게으른 개를 뛰어 넘었다"
-mode = "영어"
+mode = "flask"
 
 change = {
     "낚시":"다음 문장을 낚시성 스타일로 바꿔주세요 ",
     "영어" : "다음 문장을 영어로 번역해 주세요 ",
+    "flask" : "다음 문장을 출력하는 플라스크 코드를 출력해줘",
+    "random" : "다음 문장을 문자 한글자 별로 순서를 뒤죽박죽 섞어줘"
 }
 
 prompt = change[mode] + "\n" + txt

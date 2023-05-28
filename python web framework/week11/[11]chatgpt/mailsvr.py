@@ -2,8 +2,6 @@ import os
 import openai
 from flask import Flask, request
 
-api_key = os.environ["api_key"]
-openai.api_key = api_key 
 
 app = Flask(__name__)
 

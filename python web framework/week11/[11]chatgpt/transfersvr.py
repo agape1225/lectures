@@ -15,6 +15,8 @@ def index():
             <select name=mode>
                 <option>영어</option>
                 <option>낚시</option>
+                <option>flask</option>
+                <option>random</option>
             </select>
 
             <input type=submit value=전송 />
@@ -26,11 +28,13 @@ def index():
 def gpt():    
     txt = request.args.get("txt", "안녕")    
     mode = request.args.get("mode", "영어")    
-
     change = {
-        "낚시":"다음 문장을 낚시성 스타일로 바꿔주세요 ",
-        "영어" : "다음 문장을 영어로 번역해 주세요 ",
+    "낚시":"다음 문장을 낚시성 스타일로 바꿔주세요 ",
+    "영어" : "다음 문장을 영어로 번역해 주세요 ",
+    "flask" : "다음 문장을 출력하는 플라스크 코드를 출력해줘",
+    "random" : "다음 문장을 문자 한글자 별로 순서를 뒤죽박죽 섞어줘"
     }
+
 
     prompt = change[mode] + "\n" + txt
 
@@ -43,7 +47,7 @@ def gpt():
     res= completion.choices[0].message['content']
 
     html = f"""
-     원문 : {txt}</br>
+     원문 : <p>{txt}</p></br>
      변환({mode}) :   {res}
     """   
     
