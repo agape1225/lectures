@@ -2,6 +2,10 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route('/')
+def tmp_main():    
+    return "<h1>MAIN PAGE</h1>"
+
 @app.route('/tmpl')
 def tmpl():    
     return render_template("tmpl.html")
@@ -82,22 +86,6 @@ def loopobjs():
 @app.route('/include')
 def include():    
     return render_template("include.html", title="hello")
-
-
-@app.route('/score')
-def score():
-    data = [ ["이순신", 90, 80, "" ], ["홍길동", 92, 89, "" ], ["김철수", 70, 65, "" ] ]
-    mx = 0
-    for d in data :
-        sm = d[1] + d[2]
-        if sm > mx : mx = sm
-    
-    for d in data:
-        sm = d[1] + d[2]
-        if sm == mx :
-            d[3] = "👏🏻"
-
-    return render_template("score.html", data=data)
 
 
 

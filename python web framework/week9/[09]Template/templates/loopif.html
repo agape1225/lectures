@@ -1,12 +1,14 @@
 {% for comment in comments %}
     {% if loop.index % 2 == 0 %}
+       {%set tmp = loop.index%}
        {% set bg_color = '#e6f9ff' %}
     {% else %}
+       {%set tmp = loop.index%}
        {% set bg_color = '#eee' %}
     {% endif %}
 
    <div style="background-color:{{ bg_color }}">
-          <p>#{{ loop.index }}</p>
+          <p>#{{ tmp }}</p>
    <p style="font-size: 24px">{{ comment }}</p>
    </div>
  {% endfor %}
