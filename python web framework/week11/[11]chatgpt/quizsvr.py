@@ -7,8 +7,7 @@ import os
 
 app = Flask(__name__)
 
-api_key = os.environ["api_key"]
-openai.api_key = api_key 
+openai.api_key = "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" 
 
 @app.route('/')
 def index():
@@ -29,6 +28,8 @@ def quiz() :
 
     column 1 :  문제, column 2 : 보기1, column 3 :  문제2, column 4 : 보기3,   
     column 5: 보기4, column 6 : 정답, column 7 : 정답설명
+
+    단 to_excel() 메소드를 사용할 때 저장하는 파일의 경로는 바로 C드라이브 밑으로 저장되게 해줘
 
     """
 

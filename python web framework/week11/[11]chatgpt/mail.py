@@ -2,6 +2,7 @@
 import os
 import openai
 
+openai.api_key = "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" 
 
 
 subject = "오늘 오전에 다툰 사건"

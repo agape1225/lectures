@@ -1,8 +1,6 @@
-import os
 import openai
 
-api_key = os.environ["api_key"]
-openai.api_key = api_key 
+openai.api_key = "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" 
 
 messages = []
     
@@ -18,4 +16,8 @@ while True :
     res= completion.choices[0].message['content']
     messages.append({"role": 'assistant', "content": res}  )
 
+    print(messages)
+
     print("GPT : " +res)
+
+    

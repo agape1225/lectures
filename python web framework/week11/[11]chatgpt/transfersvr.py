@@ -1,7 +1,8 @@
+import os
 import openai
 from flask import Flask, request
 
-openai.api_key = "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"
+openai.api_key = "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" 
 
 app = Flask(__name__)
 

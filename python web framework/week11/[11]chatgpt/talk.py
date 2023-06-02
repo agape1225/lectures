@@ -2,7 +2,7 @@ import os
 import openai
 
 #api_key = os.environ["api_key"]
-openai.api_key = ""
+openai.api_key = "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"
 
 
 while True :

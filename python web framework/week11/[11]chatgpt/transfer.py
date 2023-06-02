@@ -1,6 +1,7 @@
 import os
 import openai
 
+openai.api_key = "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"
 
 txt = "여우가 게으른 개를 뛰어 넘었다"
 mode = "flask"
