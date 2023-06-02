@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>if-else</title>
+</head>
+
+<body>
+    <h3>if-else를 이용한 학점 매기기</h3>
+    <hr>
+    <script>
+        let ans;
+        let num = prompt("숫자 아무거나 입력하세요", 100);
+        num = parseInt(num); // 문자열을 숫자로 바꿈
+        if(num == 0)
+            ans = "0"
+        else if(num > 0)
+            ans = "양수"
+        else
+            ans = "음수"
+        document.write(num + "는 " + ans + "입니다.<br>");
+    </script>
+</body>
+
+</html>
