@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>함수</title>
+    <script>
+        var a;
+        var b;
+        function adder() { // 함수 작성
+            a = prompt("0보다 큰 정수를 입력하세요 - 1", 0);
+            b = prompt("0보다 큰 정수를 입력하세요 - 2", 0);
+            let sum;
+            sum = Math.abs(parseInt(a) - parseInt(b));
+            return sum;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>함수 adder()</h3>
+    <hr>
+    <script>
+        let n = adder(); // 함수 호출
+        document.write( a + " +  " + b + " = " + n + "<br>");
+    </script>
+</body>
+
+</html>
