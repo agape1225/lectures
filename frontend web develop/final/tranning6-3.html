@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>document.write()</title>
+</head>
+
+<body>
+    
+    <h1>큰 자리수와 낮은 자리수 같은지 비교</h1>
+    <hr>
+
+    <script>
+        let num = prompt("숫자 입력");
+
+        document.write(num + ": ");
+ 
+     //    if(pwd == "you"){
+     //         document.write("통과");
+     //    }
+     //    else{
+     //         document.write("취소");
+     //    }
+
+     let firstNum;
+     let lastNum;
+
+     lastNum = num % 10;
+
+     while(10 < num){
+          num = Math.floor(num / 10);
+     }
+
+     firstNum = num;
+
+     //console.log(firstNum);
+     //console.log(lastNum);
+
+     if(firstNum == lastNum){
+          document.write("같음");
+     }else{
+          document.write("다름");
+     }
+
+     </script>
+
+</body>
+
+</html>
