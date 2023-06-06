@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function randomInt() { // 1~9의 십진 난수 리턴
+            return Math.floor(Math.random() * 100) + 1; // (0~8)+1
+        }
+        let plots = Array();
+
+        for(let i = 0; i < 10; i++){
+            plots.push(randomInt());
+            console.log(plots[i]);
+        }
+
+    </script>
+</head>
+
+<body>
+    <script>
+        
+        let max = -1;
+        for(let i = 0; i < 10; i++){
+            if(max < plots[i]){
+                max = plots[i];
+            }
+        }
+        
+        document.write("가장 큰 수는: " + Math.max(...plots));
+    </script>
+</body>
+
+</html>
