@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>방문 시간에 따라 변하는 배경색</title>
+</head>
+
+<body>
+    <h3>실습 문제 입니다.</h3>
+    <hr>
+    <script>
+        var names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+        //num1
+
+        for(let i = 0; i < names.length; i++){
+            document.write(names[i] + " ");
+        }
+
+        document.write("<br>");
+
+        var ansIndex = 0;
+        var ansSize = names[0].length;
+
+        for(let i = 1; i < names.length; i++){
+            if(ansSize < names[i].length){
+                ansSize = names[i].length;
+                ansIndex = i;
+            }
+        }
+
+        document.write(names[ansIndex] + "<br>");
+
+        names.sort();
+
+        document.write(names[0] + "<br>");
+
+        for(let i = 0; i < names.length; i++){
+            document.write(names[i] + " ");
+        }
+
+        document.write("<br>");
+
+    </script>
+</body>
+
+</html>
