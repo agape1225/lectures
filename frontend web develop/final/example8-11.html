@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML 문서의 동적 구성</title>
+</head>
+<body">
+    <h3>insertBefore 예제</h3>
+    <hr>
+    <ul id="deviceList">
+        <li>스마트폰</li>
+        <li>태블릿</li>
+    </ul>
+    <p>버튼을 클릭하면 새로운 항목이 삽입됩니다.</p>
+    <button onclick="insertLi()">목록 추가</button>
+    <script>
+        function insertLi() {
+            var newNode = document.createElement("li"); // 객체 생성
+            var textNode = document.createTextNode("웨어러블 디바이스");
+            newNode.appendChild(textNode);
+            var listNode = document.getElementById("deviceList"); // 삽입할 곳을 찾아서
+            listNode.insertBefore(newNode, listNode.childNodes[0]); // 맨 앞에삽입
+        }
+    </script>
+    </body>
+
+</html>
