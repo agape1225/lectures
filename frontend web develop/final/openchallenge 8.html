@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>갬블링 게임</title>
+    <style>
+        table {
+            border: 1px solid violet;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            padding: 0px;
+            font: italic 50px consolas, sans-serif;
+            color: blue;
+            text-align: center;
+            background: linen;
+        }
+
+        div#msg {
+            font: italic 18px consolas, sans-serif;
+            color: magenta;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+
+        function getRandomNums(){
+            return Math.floor(Math.random() * 3);
+        }
+
+        function change(idNum){
+            var tds = document.getElementById(idNum);
+            tds.innerHTML = getRandomNums();
+
+            if(idNum == "third"){
+
+                var resultDiv = document.getElementById("msg");
+                var tdList = document.getElementsByTagName("td");
+            
+                if(tdList[0].innerHTML == tdList[1].innerHTML && tdList[1].innerHTML == tdList[2].innerHTML){
+                    resultDiv.innerHTML = "Success";
+                }else{
+                    resultDiv.innerHTML = "Fail";
+                }
+
+            }
+        }
+
+        function reset(obj){
+            var tdList = document.getElementsByTagName("td");
+            for(let i = 0; i < tdList.length; i++){
+                tdList[i].innerHTML = 0;
+            }
+
+            obj.innerHTML = "";
+
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <h3>갬블링 게임</h3>
+    <p>각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다.
+        모두 같은 수가 나오면 승리합니다.</p>
+    <hr>
+    <table>
+        <tr>
+            <td id="first" onclick="change('first')">0</td>
+            <td id="second" onclick="change('second')">0</td>
+            <td id="third" onclick="change('third')">0</td>
+        </tr>
+    </table>
+    <div id="msg" onclick="reset(this)"></div>
+</body>
+
+</html>
