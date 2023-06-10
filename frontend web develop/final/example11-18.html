@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Basic</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () { // 이벤트 연결
+            $('form').submit(function (event) { // 이벤트 연결
+                var value = $('input').val(); // input 태그 값 추출
+                if (value.length == 0)
+                    alert('이름을 입력하세요.'); // 유효성 검사 실패
+                else if (value.replace(/[가-힣]/g, '').length == 0) // 유효성 검사(한글)
+                    alert('과정을 진행합니다.'); // 유효성 검사 통과
+                else {
+                    alert('한글 이름을 입력해주세요.'); // 유효성 검사 실패
+                    //event.preventDefault();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form>
+        <label>이름</label>
+        <input type="text"><input type="submit">
+    </form>
+</body>
+
+</html>
