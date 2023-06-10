@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Basic</title>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            var output = ''; // 문서 객체 추가, 빈 문자열
+            for (var i = 0; i < 256; i++) {
+                output += '<div></div>';
+            }
+            document.body.innerHTML = output;
+            $('div').css({ // 스타일을 적용
+                height: 2,
+                border: '1px solid gold',
+                backgroundColor: function (i) {
+                    return 'rgb(' + i + ',' + i + ',' + i + ')';
+                }
+            });
+        });
+    </script>
+</head>
+
+<body> </body>
+
+</html>

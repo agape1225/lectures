@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Basic</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#box').css({ // 스타일 변경 및 이벤트 연결
+                width: 100, height: 100, // 초기값
+                background: 'orange'
+            }).on('click', function () {
+                $(this).css('background', 'red');
+            }).on('mouseenter', function () {
+                $(this).css('background', 'blue');
+            }).on('mouseleave', function () {
+                $(this).css('background', 'orange');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+
+</html>

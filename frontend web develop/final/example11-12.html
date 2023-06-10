@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Basic</title>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            var text = $('#h1-id').text();
+            var html = $('#h1-id').html();
+            alert("text: " + text);
+            alert("html: " + html);
+        });
+    </script>
+</head>
+
+<body>
+    <h1 class="h1-tag" id="h1-id">Header - 0</h1>
+    <h1 class="h1-tag">Header - 1</h1>
+</body>
+
+</html>
