@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <style>
+        table{
+            border: 1px solid blue;
+            border-collapse: collapse;
+        }
+        tr{
+            border: 1px solid blue;
+        }
+        td{
+            border: 1px solid blue;
+            padding: 5px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#submitButton").click(function () {
+                //console.log("test");
+                let birth = $("#birth option:selected").val();
+                let dinner = $("#sid-input").val();
+                let ans = "출생 연도는 " + birth + "년,<br>" + "학번은 " + dinner + "입니다."; 
+
+                //console.log(ans);
+
+                $("#print-answer").html(ans);
+
+                
+                
+                //alert(dinner);
+                // var selValBus = parseInt($("input[name='bus']:checked").val());
+                // var selValDinner = parseInt($("input[name='dinner']:checked").val());
+                // let avg = (selValBus + selValDinner) / 2;
+
+                
+                // alert("평균은 " + avg + "입니다.");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <p>출생연도와 학번을 입력하고 결과 출력 버튼 클릭하시오.</p>
+    <table>
+        <tr>
+            <td>
+                출생연도
+            </td>
+            <td>
+                <select id="birth">
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019" selected>2019</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>학번</td>
+            <td><input type="text" placeholder="201904055" id="sid-input"> 
+                <input type="submit" value="결과 출력" id="submitButton">
+                <!-- <button id="submitButton">결과 출력</button> -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                결과출력
+            </td>
+            <td>
+                <div id="print-answer">출생 연도는 2019년, <br> 학번은 201901234입니다.</div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

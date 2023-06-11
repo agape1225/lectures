@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <style>
+        td {
+            width: 100px;
+            text-align: center;
+        }
+
+        tr {
+            border-bottom: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#survey").on('change', function () {
+                var selValBus = $("input[name='bus']:checked").val();
+                var selValDinner = $("input[name='dinner']:checked").val();
+                //console.log(selVal);
+                $("#print-bus").text(selValBus);
+                $("#print-dinner").text(selValDinner);
+            });
+            $("#submitButton").click(function () {
+                //console.log("test");
+                var selValBus = parseInt($("input[name='bus']:checked").val());
+                var selValDinner = parseInt($("input[name='dinner']:checked").val());
+                let avg = (selValBus + selValDinner) / 2;
+
+                
+                alert("평균은 " + avg + "입니다.");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>만족도 조사</h1>
+    <hr>
+
+    다음 설문에 답해주세요.
+    <br>
+    <hr>
+    <form action="" id="survey">
+        <table>
+            <tr>
+                <td>
+                    문항
+                </td>
+                <td>
+                    매우만족<br>
+                    (5)
+                </td>
+                <td>
+                    만족<br>
+                    (4)
+                </td>
+                <td>
+                    보통<br>
+                    (3)
+                </td>
+                <td>
+                    불만<br>
+                    (2)
+                </td>
+                <td>
+                    매우불만<br>
+                    (1)
+                </td>
+                <td>
+                    평점
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    셔틀버스
+                </td>
+                <td>
+                    <input type="radio" value="5" name="bus">
+                </td>
+                <td>
+                    <input type="radio" value="4" name="bus">
+                </td>
+                <td>
+                    <input type="radio" value="3" name="bus">
+                </td>
+                <td>
+                    <input type="radio" value="2" name="bus">
+                </td>
+                <td>
+                    <input type="radio" value="1" name="bus">
+                </td>
+                <td>
+                    <div id="print-bus"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    학생식당
+                </td>
+                <td>
+                    <input type="radio" value="5" name="dinner">
+                </td>
+                <td>
+                    <input type="radio" value="4" name="dinner">
+                </td>
+                <td>
+                    <input type="radio" value="3" name="dinner">
+                </td>
+                <td>
+                    <input type="radio" value="2" name="dinner">
+                </td>
+                <td>
+                    <input type="radio" value="1" name="dinner">
+                </td>
+                <td>
+                    <div id="print-dinner"></div>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <input type="submit" id="submitButton">
+    </form>
+
+</body>
+
+</html>
