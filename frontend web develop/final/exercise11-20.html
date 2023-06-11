@@ -7,7 +7,9 @@
     <script>
         $(document).ready(function () {
             $('button').click(function () {
-                $('.page').fadeToggle('slow'); // 효과 적용
+                //$('.page').fadeToggle(); // 효과 적용
+                //$('.page').toggle('slow');
+                $('.page').slideToggle("slow");
             });
         });
     </script>
