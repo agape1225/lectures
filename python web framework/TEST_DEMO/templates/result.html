@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <style>
+            span{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            {% for song in song_list  %}
+                <li>{{song.title}} - <span>{{song.artist}}</span></li>
+            {% endfor  %}
+        </ul>
+        
+    </body>
+</html>
