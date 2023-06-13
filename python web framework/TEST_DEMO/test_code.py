@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import openai
 import re
 
+openai.api_key = "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"
+
 app = Flask(__name__)
 
 def gpt(song_size):

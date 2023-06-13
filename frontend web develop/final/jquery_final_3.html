@@ -1,42 +1,68 @@
 <html>
-    <head>
-        <style>
-            button{
-                width: 50px;
 
-                height: 40px;
-            }
-            td{
-                /* padding: 10px; */
-            }
-            input{
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <table>
-            <tr>
-                <td colspan="4"><input type="text"></td>
-            </tr>
-            <tr>
-                <td><button>1</button></td>
+<head>
+    <style>
+        button {
+            width: 50px;
 
-                <td><button>1</button></td>
+            height: 40px;
+        }
 
-                <td><button>1</button></td>
+        td {
+            /* padding: 10px; */
+        }
 
-                <td><button>1</button></td>
-            </tr>
-            <tr>
-                <td><button>1</button></td>
+        input {
+            width: 100%;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
 
-                <td><button>1</button></td>
+        var surfix = "";
 
-                <td><button>1</button></td>
+        $(document).ready(function () {
+            $(".calc-button").click(function(){
+                let token = $(this).attr('value');
 
-                <td><button>1</button></td>
-            </tr>
-        </table>
-    </body>
+                if(token == "c"){
+                    surfix = "";
+                }else if(token == "="){
+                    surfix = eval(surfix);
+                }else{
+                    surfix += token;
+                }
+                $("#print-box").val(surfix);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="print-box"></td>
+        </tr>
+        <tr>
+            <td><button value="1" class="calc-button">1</button></td>
+
+            <td><button value="2" class="calc-button">2</button></td>
+
+            <td><button value="3" class="calc-button">3</button></td>
+
+            <td><button value="4" class="calc-button">4</button></td>
+        </tr>
+        <tr>
+            <td><button value="c" class="calc-button">C</button></td>
+
+            <td><button value="=" class="calc-button">=</button></td>
+
+            <td><button value="+" class="calc-button">+</button></td>
+
+            <td><button value="*" class="calc-button">*</button></td>
+        </tr>
+    </table>
+</body>
+
 </html>

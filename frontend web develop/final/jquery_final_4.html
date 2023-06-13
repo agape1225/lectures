@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        tr{
+            border: 1px solid black;
+        }
+        td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        #name-input{
+            width: 100px;
+        }
+        #first-phone-number{
+            width: 100px;
+        }
+        #second-phone-number{
+            width: 100px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#result-button").click(function () {
+                
+                let name = $("#name-input").val();
+                let gender = $("input[name='gender']:checked").val();
+                let phoneNumber = $("#phone-number option:selected").val() + "-" + $("#first-phone-number").val() + "-" + $("#second-phone-number").val();
+                let result = "당신은 " + name + ", " + gender + "이며, 전화번호는 " + phoneNumber + "입니다."
+                console.log(result);
+                $("#result-box").text(result);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <p>출생연도와 학번을 입력하고 결과 출력 버튼 클릭하시오.</p>
+    <table>
+        <tr>
+            <td>
+                성명
+            </td>
+            <td>
+                <input type="text" id="name-input">
+            </td>
+            <td>
+                성별
+            </td>
+            <td>
+                <input type="radio" name="gender" value="남자">남
+                <input type="radio" name="gender" value="여자">여
+            </td>
+        </tr>
+        <tr>
+            <td>휴대전화</td>
+            <td colspan="3">
+                <select id="phone-number">
+                    <option value="010" selected>010</option>
+                    <option value="017">017</option>
+                    <option value="019">019</option>
+                </select> 
+                 - 
+                <input type="number" id="first-phone-number" placeholder="1234">
+                 - 
+                <input type="number" id="second-phone-number" placeholder="5678 ">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="result-button">결과 출력</button>
+            </td>
+            <td colspan="3">
+                <div id="result-box"></div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
