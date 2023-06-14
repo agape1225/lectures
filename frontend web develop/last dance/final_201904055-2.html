@@ -11,6 +11,10 @@
             width: 300px;
         }
 
+        #name:focus{
+            background-color: lightcyan;
+        }
+
         .input-box {
             border: 1px solid black;
             /* width: 400px; */
@@ -29,7 +33,6 @@
     <script>
         $(document).ready(function () {
             $("#name").focus();
-            $("#name").css("background-color", "lightcyan");
             $("#name").focus(function () {
                 $(this).css("background-color", "lightcyan");
             });

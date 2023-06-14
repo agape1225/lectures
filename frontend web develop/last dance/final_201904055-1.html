@@ -4,17 +4,24 @@
 <head>
     <title>HTML 문서의 동적 구성</title>
     <style>
-        #lectureList{
+        /* #lectureList{
             color: blue;
             size: 18px;
-        }
+        } */
 
         #mapList{
             color: violet;
-            size: 18px;
+            font-size: 18px;
+        }
+
+        .first-lectures{
+            color: blue;
+            font-size: 18px;
+
         }
         .first-lectures:hover{
             cursor: pointer;
+            
         }
     </style>
 </head>
@@ -36,6 +43,10 @@
         function removeLecture(obj){
             let lectureName = obj.innerText;
             console.log(obj.innerText);
+            let tmpColor = window.getComputedStyle(obj).color;
+            let size = window.getComputedStyle(obj).fontSize;
+            console.log(window.getComputedStyle(obj).color);
+            console.log(size);
 
             var p = obj.parentElement;
             p.removeChild(obj);
@@ -43,8 +54,9 @@
             var newNode = document.createElement("li"); // 객체 생성
             var textNode = document.createTextNode(lectureName);
             newNode.appendChild(textNode);
-            newNode.style.color = "blue";
-            newNode.style.size = "18px";
+
+            newNode.style.color = tmpColor;
+            newNode.style.fontSize = size;
 
             var listNode = document.getElementById("mapList"); // 삽입할 곳을 찾아서
             listNode.appendChild(newNode); // 맨 앞에삽입
