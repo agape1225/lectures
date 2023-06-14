@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        tr{
+            border: 1px solid black;
+            text-align: center;
+        }
+        td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        #name-input{
+            width: 100px;
+        }
+        #first-phone-number{
+            width: 100px;
+        }
+        #second-phone-number{
+            width: 100px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+
+        var amount = 10000;
+        var messageValue = [
+            "잔액 확인 완료"
+            , "저금 완료"
+            , "인출 완료"
+            , "이자 지급 완료"
+            , "저금 금액 오류"
+            , "인출 금액 오류"
+            , "인출 불가(잔액 부족)"];
+
+        $(document).ready(function () {
+            $("#get-result").click(function () {
+                let dir = $("input[name='dir']:checked").val();
+                let resultBox = $("#result-box");
+                let messageBox = $("#message-box");
+                console.log(dir);
+                if(dir == "잔액 확인"){
+                    resultBox.val(amount);
+                    console.log(messageValue[0]);
+                    messageBox.text(amount + "원 " + messageValue[0]);
+                    
+                }else if(dir == "저금"){
+                    let tmp = parseInt($("#mount").val());
+                    if(isNaN(tmp) || tmp < 0){
+                        messageBox.text(messageValue[4]);
+                    }else{
+                        amount += tmp;  
+                        resultBox.val(amount);
+                        messageBox.text(tmp + "원 " + messageValue[1]);
+                    }
+                    $("#mount").val("");
+                    
+
+                }else if(dir == "인출"){
+                    let tmp = parseInt($("#mount").val());
+                    console.log(tmp);
+                    if(isNaN(tmp) || tmp < 0){
+                        messageBox.text(messageValue[5]);
+                    }
+                    else if(tmp > amount){
+                        resultBox.val("인출 불가");
+                        messageBox.text(messageValue[6]);
+                    }else{
+                        amount = amount - parseInt($("#mount").val());
+                        resultBox.val(amount);
+                        messageBox.text(amount + "원 " + messageValue[2]);
+                    }
+                    $("#mount").val("");
+                }else{
+                    
+                }
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <p>출생연도와 학번을 입력하고 결과 출력 버튼 클릭하시오.</p>
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="radio" name="dir" value="잔액 확인">잔액 확인
+                <input type="radio" name="dir" value="저금">저금
+                <input type="radio" name="dir" value="인출">인출
+                <input type="radio" name="dir" value="이자 잔금">이자 지급
+                <button id="get-result">실행</button>
+            </td>
+        </tr>
+        <tr>
+            <td>저금/인출 금액</td>
+            <td>
+                <input type="text" id="mount">원
+            </td>
+            <td>잔액</td>
+            <td>
+                <input type="text" id="result-box">원
+            </td>
+        </tr>
+        <tr>
+            <td>
+                이율
+            </td>
+            <td>
+                2%
+            </td>
+            <td>
+                이자
+            </td>
+            <td>
+                <input type="text" id="cal">원
+            </td>
+        </tr>
+    </table>
+    처리 메세지: <span id="message-box"></span>
+
+</body>
+
+</html>
