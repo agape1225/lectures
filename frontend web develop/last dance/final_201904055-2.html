@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML 문서의 동적 구성</title>
+    <style>
+        .content-box {
+            background-color: #F0E0F0;
+            text-align: center;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .input-box {
+            border: 1px solid black;
+            /* width: 400px; */
+            text-align: left;
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #result-box {
+            width: 95%;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#name").focus();
+            $("#name").css("background-color", "lightcyan");
+            $("#name").focus(function () {
+                $(this).css("background-color", "lightcyan");
+            });
+            $("#name").blur(function () {
+                $(this).css("background-color", "#ffffff");
+                if ($(this).val() == "") { // 빈 문자열
+                    alert("이름 필수 입력!");
+                    setTimeout(function () { $("#name").focus(); }, 1);
+                }
+            });
+            $("#result-button").click(function () {
+                let name = $("#name").val();
+                let gender = $("input[name='gender']:checked").val();
+                let grade = $("#grade option:selected").val();
+                let position = "";
+                $("input:checkbox[name='position']").each(function () { // 전체 순회하면서 체크
+                    if (this.checked) // check되어 있으면 true
+                        position += " " + this.value;
+                });
+
+                let result = "";
+                result += "이름: " + name + "\n";
+                result += "성별: " + gender + "\n";
+                result += "학년: " + grade + "\n";
+                result += "관심 분야: " + position;
+
+                $("#result-box").val(result);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <h3>관심 분야 설문 조사</h3>
+    <hr>
+    <div class="content-box">
+        <div class="input-box">
+            1. 성명(필수 입력) <br>
+            <input type="text" id="name">
+        </div>
+        <div class="input-box">
+            2. 성별 <br>
+            <input type="radio" name="gender" value="남성" checked>남성</input>
+            <input type="radio" name="gender" value="여성">여성</input>
+        </div>
+        <div class="input-box">
+            3.학년 <br>
+            <select id="grade">
+                <option value="1학년">1학년</option>
+                <option value="2학년">2학년</option>
+                <option value="3학년">3학년</option>
+                <option value="4학년">4학년</option>
+            </select>
+        </div>
+        <div class="input-box">
+            4. 관심분야 <br>
+            <label><input type="checkbox" name="position" value="개발">개발</label>
+            <label><input type="checkbox" name="position" value="기획">기획</label>
+            <label><input type="checkbox" name="position" value="영업">영업</label>
+            <label><input type="checkbox" name="position" value="창업">창업</label><br>
+        </div>
+
+        <div class="input-box">
+            <textarea name="" id="result-box" cols="50" rows="10"></textarea><br>
+            <button id="result-button">확인</button>
+        </div>
+    </div>
+</body>
+
+</html>

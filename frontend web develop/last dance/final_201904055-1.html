@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML 문서의 동적 구성</title>
+    <style>
+        #lectureList{
+            color: blue;
+            size: 18px;
+        }
+
+        #mapList{
+            color: violet;
+            size: 18px;
+        }
+        .first-lectures:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body">
+    <h3>교과목 목록</h3>
+    <p>로드맵에 추가하려는 과목명을 클릭하세요.</p>
+    <ul id="lectureList">
+        <li onclick="removeLecture(this)" class="first-lectures">웹개발기초</li>
+        <li onclick="removeLecture(this)" class="first-lectures">웹개발응용</li>
+        <li onclick="removeLecture(this)" class="first-lectures">웹서버프레임워크</li>
+    </ul>
+    <hr>
+    <h3>로드맵</h3>
+    <ul id="mapList">
+        <li>C프로그래밍</li>
+        <li>파이썬응용</li>
+    </ul>
+    <script>
+        function removeLecture(obj){
+            let lectureName = obj.innerText;
+            console.log(obj.innerText);
+
+            var p = obj.parentElement;
+            p.removeChild(obj);
+
+            var newNode = document.createElement("li"); // 객체 생성
+            var textNode = document.createTextNode(lectureName);
+            newNode.appendChild(textNode);
+            newNode.style.color = "blue";
+            newNode.style.size = "18px";
+
+            var listNode = document.getElementById("mapList"); // 삽입할 곳을 찾아서
+            listNode.appendChild(newNode); // 맨 앞에삽입
+        }
+    </script>
+    </body>
+
+</html>
